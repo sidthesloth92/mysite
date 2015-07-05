@@ -31,7 +31,7 @@ rgb(230, 233, 240) codrops light gray
 
 $fixed-navbar-background: rgba(31, 32, 36, 1);
 $sidebar-background: rgba(31, 32, 36, 0.4);
-$header-background: #2A2B30;
+$header-background: rgba(31, 32, 36, 0.8);
 $main-section-background: rgba(233, 234, 240, 1);
 $footer-background: rgba(233, 234, 240, 1);
 /*-------------------------------------------------------------------------------------------------*/
@@ -120,6 +120,7 @@ body {
                 z-index: -1;
                 color: white;
                 font-family: 'Manifesto';
+                background: $header-background;
                 .show_case {
                     position: absolute;
                     width: 100%;
@@ -128,6 +129,7 @@ body {
                     box-sizing: border-box;
                     text-transform: uppercase;
                     padding-top: 200px;
+
                     .name_container {
                         .name {
                             font-size: 3rem;
@@ -158,19 +160,6 @@ body {
             .main_section {
                 background: $main-section-background;
                 height: 500px;
-                position: relative;
-                .background_text {
-                    position: absolute;
-                    font-size: 500px;
-                    font-family: Manifesto;
-                    top: 200px;
-                    left: 25%;
-
-                    transform: rotate(-45deg);
-                    background: url(../img//fire.jpg) no-repeat;
-                   -webkit-background-clip: text;
-                   -webkit-text-fill-color: transparent;
-                }
             }
             /*-------------------------------------------------------------------------------------------------*/
             /*-------------------------------------------------------------------------------------------------*/
@@ -240,7 +229,7 @@ body {
                 .sidebar_list_left {
                     margin-top: 30px;
                     clear: both;
-                    .navbar_items: nth-child(1) {
+                    .navbar_items:nth-child(1) {
                         top: 0px;
                     }
                     .navbar_items:nth-child(2) {
@@ -248,7 +237,7 @@ body {
                     }
                 }
                 .sidebar_list_right {
-                    .navbar_items: nth-child(1) {
+                    .navbar_items:nth-child(1) {
                         top: 100px;
                     }
                     .navbar_items:nth-child(2) {

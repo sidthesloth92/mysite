@@ -140,7 +140,8 @@ body {
         position: relative;
         z-index: -1;
         color: white;
-        font-family: 'Manifesto'; }
+        font-family: 'Manifesto';
+        background: rgba(31, 32, 36, 0.8); }
         .container .main_body_container .rest_of_body header .show_case {
           position: absolute;
           width: 100%;
@@ -164,18 +165,7 @@ body {
               border-radius: 50%; }
       .container .main_body_container .rest_of_body .main_section {
         background: #e9eaf0;
-        height: 500px;
-        position: relative; }
-        .container .main_body_container .rest_of_body .main_section .background_text {
-          position: absolute;
-          font-size: 500px;
-          font-family: Manifesto;
-          top: 200px;
-          left: 25%;
-          transform: rotate(-45deg);
-          background: url(../img//fire.jpg) no-repeat;
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent; }
+        height: 500px; }
       .container .main_body_container .rest_of_body footer {
         background: #e9eaf0;
         height: 100px; }
@@ -232,16 +222,15 @@ body {
           transition: .3s all linear; }
         .container .sidebar .side_menu .sidebar_list_left {
           margin-top: 30px;
-          clear: both;
-          .navbar_items: nth-child(1);
-            .navbar_items-top: 0px; }
+          clear: both; }
+          .container .sidebar .side_menu .sidebar_list_left .navbar_items:nth-child(1) {
+            top: 0px; }
           .container .sidebar .side_menu .sidebar_list_left .navbar_items:nth-child(2) {
             top: 50px; }
-        .container .sidebar .side_menu .sidebar_list_right {
-          .navbar_items: nth-child(1);
-            .navbar_items-top: 100px; }
-          .container .sidebar .side_menu .sidebar_list_right .navbar_items:nth-child(2) {
-            top: 150px; } }
+        .container .sidebar .side_menu .sidebar_list_right .navbar_items:nth-child(1) {
+          top: 100px; }
+        .container .sidebar .side_menu .sidebar_list_right .navbar_items:nth-child(2) {
+          top: 150px; } }
   @media screen and (min-width: 601px) {
     .container .sidebar {
       width: 100%;
