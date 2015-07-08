@@ -1,11 +1,13 @@
 $(document).ready(function() {
 	var main_body_container = $('.main_body_container');
+	var main_section = $('.main_section');
+	var rest_of_body = $('.rest_of_body')
 	var sidebar = $('.sidebar');
 	var menuItems = $('.navbar_items');
 
     main_body_container.css('height', window.innerHeight + 'px');
-    
-
+    //main_section.css('height', (window.innerHeight - 60) + 'px');
+    rest_of_body.css('height', (window.innerHeight - 60) + 'px');
 
     $('.navbar_menu_entry').click(function(event) {
 
@@ -37,5 +39,10 @@ $(document).ready(function() {
     });
 
 
-
+    $('.main_body_container').scroll(function(event) {
+    	global = $('.main_section');
+    	if(this.scrollTop > 500) {
+    		//alert('HI');
+    	}
+    });
 });
