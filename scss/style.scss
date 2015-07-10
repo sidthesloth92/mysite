@@ -60,6 +60,13 @@ $mobile-width: 600px;
     font-weight: 100;
 }
 
+@font-face {
+    font-family: 'Walkway SemiBold';
+    src: url(../fonts/Walkway_SemiBold.ttf) format('truetype');
+    letter-spacing: 2px;
+    font-weight: 100;
+}
+
 html {}
 
 body {
@@ -147,7 +154,7 @@ body {
     .sidebar {
         position: fixed;
         color: white;
-        font-family: 'Walkway Bold';
+        font-family: 'Walkway SemiBold';
         letter-spacing: 2px;
         .navbar_items {}
     }
