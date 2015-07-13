@@ -56,11 +56,19 @@ rgb(92, 94, 220) purple
 rgb(230, 233, 240) codrops light gray
 */
 /*-------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------- DEVICE WIDTHS -------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------------------------------------------------------------*/
 .main_section .page {
   position: absolute;
   width: 100%;
   height: 100%;
-  overflow: auto; }
+  overflow: auto;
+  -webkit-transition: all 500ms ease-out;
+  -moz-transition: all 500ms ease-out;
+  -ms-transition: all 500ms ease-out;
+  -o-transition: all 500ms ease-out;
+  transition: all 500ms ease-out; }
   .main_section .page .page_content {
     min-height: 100%; }
 
@@ -81,10 +89,7 @@ rgb(230, 233, 240) codrops light gray
       text-transform: uppercase;
       padding-top: 200px; }
       .main_section .about .header .show_case .name_container .name {
-        font-size: 3rem;
         font-weight: bold; }
-      .main_section .about .header .show_case .name_container .first {
-        margin-right: 30px; }
       .main_section .about .header .show_case .profession_container {
         margin-top: 5px; }
         .main_section .about .header .show_case .profession_container .dot {
@@ -93,6 +98,15 @@ rgb(230, 233, 240) codrops light gray
           background-color: white;
           display: inline-block;
           border-radius: 50%; }
+      @media screen and (max-width: 600px) {
+        .main_section .about .header .show_case .name_container .name {
+          font-size: 35px; }
+        .main_section .about .header .show_case .profession_container {
+          font-size: 13px; } }
+      @media screen and (min-width: 600px) {
+        .main_section .about .header .show_case .name_container .name {
+          font-size: 3rem;
+          font-weight: bold; } }
 
 .main_section .projects {
   left: 100%;
@@ -103,12 +117,15 @@ rgb(230, 233, 240) codrops light gray
   background-color: mediumslateblue; }
 
 .main_section .say-hi {
+  left: 400%;
   background: #24252a; }
   .main_section .say-hi .contact_form_wrapper {
     position: absolute;
     height: 100%;
     width: 100%;
     overflow: hidden; }
+    .main_section .say-hi .contact_form_wrapper > * {
+      font-family: 'Walkway SemiBold', sans-serif; }
     .main_section .say-hi .contact_form_wrapper .contact_form_element {
       position: absolute;
       width: 100%;
@@ -123,7 +140,6 @@ rgb(230, 233, 240) codrops light gray
         margin: 0 auto;
         display: block;
         padding: 0px 10px;
-        font-family: 'Walkway SemiBold', sans-serif;
         box-shadow: 0px 2px 3px 1px rgba(92, 94, 220, 0.2); }
       .main_section .say-hi .contact_form_wrapper .contact_form_element label {
         position: absolute;
@@ -140,16 +156,18 @@ rgb(230, 233, 240) codrops light gray
       .main_section .say-hi .contact_form_wrapper .contact_form_element input {
         background: #333;
         color: white;
-        border: 0px; }
+        border: 0px;
+        font-family: 'Walkway SemiBold', sans-serif; }
         .main_section .say-hi .contact_form_wrapper .contact_form_element input:focus {
           outline: none; }
-    .main_section .say-hi .contact_form_wrapper .contact_progress_button {
+    .main_section .say-hi .contact_form_wrapper .contact_progress_button, .main_section .say-hi .contact_form_wrapper .contact_submit_button {
       display: inline-block;
-      width: 30px;
-      height: 30px;
-      background-size: 30px 30px;
       position: absolute;
       cursor: pointer; }
+    .main_section .say-hi .contact_form_wrapper .contact_progress_button {
+      width: 30px;
+      height: 30px;
+      background-size: 30px 30px; }
     .main_section .say-hi .contact_form_wrapper .backward {
       background-image: url("../img/up_arrow.png");
       top: calc(50% - 30px); }
@@ -157,21 +175,17 @@ rgb(230, 233, 240) codrops light gray
       background-image: url("../img/down_arrow.png");
       top: calc(50%); }
     .main_section .say-hi .contact_form_wrapper .contact_submit_button {
-      display: inline-block;
       width: 120px;
       height: 40px;
       box-sizing: border-box;
       background: transparent;
-      position: absolute;
       left: calc(50% - 60px);
       top: calc(50% + 25px + 20px);
       color: #5c5edc;
       border: 1px solid #5c5edc;
       text-transform: uppercase;
-      font-family: 'Walkway SemiBold', sans-serif;
       font-size: 18px;
-      overflow: hidden;
-      cursor: pointer; }
+      overflow: hidden; }
       .main_section .say-hi .contact_form_wrapper .contact_submit_button:focus {
         outline: 0px; }
     @media screen and (max-width: 600px) {
@@ -246,9 +260,6 @@ rgb(230, 233, 240) codrops light gray
 .curtain_button:hover:before, .curtain_button:hover:after {
   transform: rotate(0deg); }
 
-/*-------------------------------------------------------------------------------------------------*/
-/*-------------------------------------------------------------------------------------------------*/
-/*--------------------------------------------- DEVICE WIDTHS -------------------------------------*/
 /*-------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------*/
 /*-------------------------------------------------------------------------------------------------*/
@@ -352,6 +363,8 @@ body {
     color: white;
     font-family: 'Walkway SemiBold';
     letter-spacing: 2px; }
+    .container .sidebar .navbar_items {
+      cursor: pointer; }
   @media screen and (max-width: 600px) {
     .container .sidebar {
       width: 100%;

@@ -45,6 +45,47 @@ $(document).ready(function() {
     		//alert('HI');
     	}
     });
+
+
+    mainMenuNavigation();
 });
+
+
+function mainMenuNavigation() {
+	var about_menu_entry = $('.about_menu_entry');
+	var projects_menu_entry = $('.projects_menu_entry');
+	var blog_menu_entry = $('.blog_menu_entry');
+	var sayhi_menu_entry = $('.sayhi_menu_entry');
+
+	var about_page = $('.about');
+	var projects_page = $('.projects');
+	var blog_page = $('.blog');
+	var sayhi_page = $('.say-hi');
+
+	about_menu_entry.click(function() {
+		about_page.css('left', '0%');
+		projects_page.css('left', '100%');
+		blog_page.css('left', '200%');
+		sayhi_page.css('left', "300%");
+	});
+	projects_menu_entry.click(function() {
+		about_page.css('left', '-100%');
+		projects_page.css('left', '0%');
+		blog_page.css('left', '100%');
+		sayhi_page.css('left', "200%");
+	});
+	blog_menu_entry.click(function() {
+		about_page.css('left', '-200%');
+		projects_page.css('left', '-100%');
+		blog_page.css('left', '0%');
+		sayhi_page.css('left', "100%");
+	});
+	sayhi_menu_entry.click(function() {
+		about_page.css('left', '-300%');
+		projects_page.css('left', '-200%');
+		blog_page.css('left', '-100%');
+		sayhi_page.css('left', "0%");
+	});
+}
 
 

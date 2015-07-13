@@ -42,7 +42,7 @@ $(document).ready(function() {
 
         setTimeout(function() {
           blowBalloons();
-        }, 200);
+        }, 300);
     });
 
     function displayButton() {
@@ -84,12 +84,12 @@ $(document).ready(function() {
             animate.setAttributeNS(null, 'attributeName', 'r');
             animate.setAttributeNS(null, 'attributeType', "XML");
             animate.setAttributeNS(null, 'from', 0);
-            animate.setAttributeNS(null, 'to', 40);
+            animate.setAttributeNS(null, 'to', 50);
             animate.setAttributeNS(null, 'dur', '2s');
             animate.setAttributeNS(null, 'fill', 'freeze');
 
             //animate.setAttributeNS(null, 'repeatCount', 'indefinite');
-            animate.setAttributeNS(null, 'begin', (3 + (i * .01)) + 's');
+            animate.setAttributeNS(null, 'begin', (4 + (i * .01)) + 's');
 
             circle.appendChild(animate);
             contact_submit_svg.append(circle);
